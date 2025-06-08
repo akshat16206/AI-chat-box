@@ -1,0 +1,10 @@
+hello, techies!
+
+
+code: load_dotenv()
+this is gonna load the enviorment file (.env) 
+
+now we will create llm var(llm,llm2) to show which llm are we using - 
+llm = ChatOpenAI(model = "gpt-3.5-turbo", api_key="")  
+we used ChatOpenAI (model = gpt-3.5-turbo here )    OpenAI
+llm2 = ChatAnthroic (model = claude-3-5-sonnet-20241022)  ClaudeAI
