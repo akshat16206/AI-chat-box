@@ -1,10 +1,69 @@
-hello, techies!
+
+AI Chat Box - Technical Documentation
+-------------------------------------
+
+Project Title: AI Chat Box
+Developer: Akshat Gupta
+Stack: Python, LangChain, External Tools
+
+-------------------------------------
+1. Objective:
+-------------------------------------
+Build a modular, terminal-based AI chatbot using the LangChain framework. It fetches results from external search APIs and Wikipedia and supports multiple LLMs like OpenAI and Anthropic.
+
+-------------------------------------
+2. Key Files:
+-------------------------------------
+
+- main.py:
+  Entry point of the application. It initializes LangChain, sets up tools, and handles user input and LLM responses.
+
+- tool.py:
+  Custom tools used by LangChain agents, like DuckDuckGo or Wikipedia-based search.
+
+- requirments.txt:
+  Python libraries required to run the system.
+
+- sample.env:
+  Sample file showing required environment variables (like `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`).
+
+-------------------------------------
+3. Supported Tools:
+-------------------------------------
+- **Wikipedia**: Searches for factual knowledge.
+- **DuckDuckGo**: Returns web search results.
+- **LangChain Tools**: Built-in wrappers for LLMs and APIs.
+
+-------------------------------------
+4. Environment Variables (via .env):
+-------------------------------------
+Example:
+OPENAI_API_KEY=your-openai-key
+ANTHROPIC_API_KEY=your-anthropic-key
 
 
-code: load_dotenv()
-this is gonna load the enviorment file (.env) 
+Make sure you copy `sample.env` to `.env` and replace with your own keys.
 
-now we will create llm var(llm,llm2) to show which llm are we using - 
-llm = ChatOpenAI(model = "gpt-3.5-turbo", api_key="")  
-we used ChatOpenAI (model = gpt-3.5-turbo here )    OpenAI
-llm2 = ChatAnthroic (model = claude-3-5-sonnet-20241022)  ClaudeAI
+-------------------------------------
+5. How It Works:
+-------------------------------------
+1. The user runs `main.py`
+2. The LangChain agent is initialized with available tools
+3. User types a query
+4. LangChain selects the right tool (Wikipedia, DuckDuckGo, or LLM)
+5. The response is printed in terminal
+
+-------------------------------------
+6. Future Enhancements:
+-------------------------------------
+- Add Flask interface
+- Connect to Telegram or Discord bot
+- Save chat logs to file or DB
+- Add streaming output
+
+-------------------------------------
+7. Contact:
+-------------------------------------
+Akshat Gupta  
+Email: akshat8036@gmail.com
+Role: Python + Web3 Developer
